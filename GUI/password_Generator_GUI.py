@@ -13,6 +13,10 @@ class MainWindow(QMainWindow):
         self.UIMainwindow = Ui_MainWindow()
         self.UIMainwindow.setupUi(self)
         
+        # make the window rouneded & removes background
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+        
         self.show()
         
 if __name__ == '__main__':
