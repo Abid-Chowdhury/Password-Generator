@@ -17,7 +17,22 @@ class MainWindow(QMainWindow):
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
         
+        # move window
+        def move_Window(event):
+            if Ui_MainWindow.return_Status() == 1:
+                Ui_MainWindow.maximize_Restore(self)
+        
+            if event.buttons() == Qt.LeftButton:
+                self.move(self.pos() + event.globalPos() - self.dragPos)
+                self.dragPos = event.globalPos()
+                event.accept()
+        
+        self.UIMainwindow.frame.mouseMoveEvent = move_Window
+                
         self.show()
+        
+    def mousePressEvent(self, event):
+        self.dragPos = event.globalPos()
         
 if __name__ == '__main__':
     app = QApplication(sys.argv)
