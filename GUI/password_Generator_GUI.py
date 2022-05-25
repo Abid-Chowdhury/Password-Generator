@@ -32,7 +32,7 @@ class MainWindow(QMainWindow):
                 self.dragPos = event.globalPos()
                 event.accept()
         
-        self.UIMainwindow.frame.mouseMoveEvent = move_Window
+        self.UIMainwindow.label_Title.mouseMoveEvent = move_Window
                 
         self.show()
         
