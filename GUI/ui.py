@@ -1,13 +1,3 @@
-# -*- coding: utf-8 -*-
-
-################################################################################
-## Form generated from reading UI file 'designkemhaM.ui'
-##
-## Created by: Qt User Interface Compiler version 5.14.1
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
-################################################################################
-
 from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
     QRect, QSize, QUrl, Qt)
 from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
@@ -15,6 +5,7 @@ from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
     QRadialGradient)
 from PySide2.QtWidgets import *
 
+GLOBAL_STATE = 0
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -283,3 +274,5 @@ class Ui_MainWindow(object):
         self.pushButton_4.setText("")
     # retranslateUi
 
+    def return_Status():
+        return GLOBAL_STATE
