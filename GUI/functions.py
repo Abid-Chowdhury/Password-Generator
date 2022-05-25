@@ -9,5 +9,12 @@ from ui import *
 
 class UIFunctions(MainWindow):
     
-    def generate_Password(self, length, include_Numbers, include_Symbols, include_Uppercase, include_Lowercase):
-        print(length, include_Numbers, include_Symbols, include_Uppercase, include_Lowercase)
+    # set default length to 8
+    password_Length = 8
+    
+    def update_Length(self):
+        UIFunctions.password_Length = self.UIMainwindow.horizontalSlider_Length.value()
+        print(UIFunctions.password_Length)
+        
+    def generate_Password(self, include_Numbers, include_Symbols, include_Uppercase, include_Lowercase):
+        print(UIFunctions.password_Length, include_Numbers, include_Symbols, include_Uppercase, include_Lowercase)
