@@ -20,6 +20,7 @@ class MainWindow(QMainWindow):
         # functions
         self.UIMainwindow.pushButton_Close.clicked.connect(lambda: self.close())
         self.UIMainwindow.pushButton_Minimize.clicked.connect(lambda: self.showMinimized())
+        self.UIMainwindow.pushButton_Generate.clicked.connect(lambda: UIFunctions.generate_Password(self, 5, self.UIMainwindow.checkBox_Numbers.isChecked(), self.UIMainwindow.checkBox_Symbols.isChecked(), self.UIMainwindow.checkBox_Uppercase.isChecked(), self.UIMainwindow.checkBox_Lowercase.isChecked()))
         
         # move window
         def move_Window(event):

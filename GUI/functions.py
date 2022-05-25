@@ -7,3 +7,7 @@ from PySide2.QtWidgets import *
 from password_Generator_GUI import *
 from ui import *
 
+class UIFunctions(MainWindow):
+    
+    def generate_Password(self, length, include_Numbers, include_Symbols, include_Uppercase, include_Lowercase):
+        print(length, include_Numbers, include_Symbols, include_Uppercase, include_Lowercase)
