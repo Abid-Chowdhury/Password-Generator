@@ -58,6 +58,10 @@ class Ui_MainWindow(object):
 "	border-radius: 5px;\n"
 "}")
         self.horizontalSlider_Length.setOrientation(Qt.Horizontal)
+        self.horizontalSlider_Length.setMinimum(1)
+        self.horizontalSlider_Length.setMaximum(100)
+        self.horizontalSlider_Length.setSingleStep(1)
+        
         self.checkBox_Uppercase = QCheckBox(self.frame)
         self.checkBox_Uppercase.setObjectName(u"checkBox_Uppercase")
         self.checkBox_Uppercase.setGeometry(QRect(300, 135, 150, 30))
