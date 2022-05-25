@@ -17,6 +17,10 @@ class MainWindow(QMainWindow):
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
         
+        # functions
+        self.UIMainwindow.pushButton_Close.clicked.connect(lambda: self.close())
+        self.UIMainwindow.pushButton_Minimize.clicked.connect(lambda: self.showMinimized())
+        
         # move window
         def move_Window(event):
             if Ui_MainWindow.return_Status() == 1:
