@@ -110,6 +110,17 @@ class Ui_MainWindow(object):
 "    background: 3px solid rgb(189, 147, 249);\n"
 "	border: 3px solid rgb(52, 59, 72);	\n"
 "}")
+        self.label_Length = QLabel(self.frame)
+        self.label_Length.setObjectName(u"label_Length")
+        self.label_Length.setGeometry(QRect(50, 135, 150, 30))
+        font3 = QFont()
+        font3.setFamily(u"Arial")
+        font3.setPointSize(12)
+        self.label_Length.setFont(font3)
+        self.label_Length.setStyleSheet(u"QLabel {\n"
+"	color: white;\n"
+"}")
+        self.label_Length.setAlignment(Qt.AlignCenter)
         self.checkBox_Lowercase.setChecked(True)
         self.checkBox_Lowercase.setAutoExclusive(False)
         self.checkBox_Lowercase.setTristate(False)
@@ -191,25 +202,6 @@ class Ui_MainWindow(object):
 "}")
         self.line.setFrameShape(QFrame.VLine)
         self.line.setFrameShadow(QFrame.Sunken)
-        self.label_Length = QLabel(self.frame)
-        self.label_Length.setObjectName(u"label_Length")
-        self.label_Length.setGeometry(QRect(50, 135, 150, 30))
-        font3 = QFont()
-        font3.setFamily(u"Arial")
-        font3.setPointSize(12)
-        self.label_Length.setFont(font3)
-        self.label_Length.setStyleSheet(u"QLabel {\n"
-"	color: white;\n"
-"}")
-        self.label_Length.setAlignment(Qt.AlignCenter)
-        self.label_Length_Number = QLabel(self.frame)
-        self.label_Length_Number.setObjectName(u"label_Length_Number")
-        self.label_Length_Number.setGeometry(QRect(50, 170, 150, 30))
-        self.label_Length_Number.setFont(font2)
-        self.label_Length_Number.setStyleSheet(u"QLabel {\n"
-"	color: white;\n"
-"}")
-        self.label_Length_Number.setAlignment(Qt.AlignCenter)
         self.lineEdit_Password = QLineEdit(self.frame)
         self.lineEdit_Password.setObjectName(u"lineEdit_Password")
         self.lineEdit_Password.setGeometry(QRect(100, 75, 300, 30))
@@ -255,6 +247,27 @@ class Ui_MainWindow(object):
 "	border-radius: 7px;\n"
 "	background-color: rgb(255,255,0);\n"
 "}")
+        self.lineEdit_Length_Number = QLineEdit(self.frame)
+        self.lineEdit_Length_Number.setObjectName(u"lineEdit_Length_Number")
+        self.lineEdit_Length_Number.setGeometry(QRect(75, 170, 100, 30))
+        self.lineEdit_Length_Number.setFont(font2)
+        self.lineEdit_Length_Number.setStyleSheet(u"QLineEdit {\n"
+"	color: white;\n"
+"	background-color: rgb(33, 37, 43);\n"
+"	border-radius: 5px;\n"
+"	border: 2px solid rgb(33, 37, 43);\n"
+"	selection-color: rgb(255, 255, 255);\n"
+"	selection-background-color: rgb(255, 121, 198);\n"
+"}\n"
+"QLineEdit:hover {\n"
+"	border: 2px solid rgb(64, 71, 88);\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid rgb(91, 101, 124);\n"
+"}")
+        self.lineEdit_Length_Number.setAlignment(Qt.AlignCenter)
+        self.lineEdit_Length_Number.setMaxLength(5)
+        
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -270,8 +283,8 @@ class Ui_MainWindow(object):
         self.checkBox_Numbers.setText(QCoreApplication.translate("MainWindow", u"Numbers", None))
         self.checkBox_Symbols.setText(QCoreApplication.translate("MainWindow", u"Symbols", None))
         self.pushButton_Generate.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
+        self.lineEdit_Length_Number.setPlaceholderText("")
         self.label_Length.setText(QCoreApplication.translate("MainWindow", u"Length", None))
-        self.label_Length_Number.setText(QCoreApplication.translate("MainWindow", u"8", None))
         self.lineEdit_Password.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Password", None))
         self.pushButton_Close.setText("")
         self.pushButton_Maximize.setText("")
