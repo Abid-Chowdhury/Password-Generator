@@ -1,5 +1,4 @@
-from password_Generator_GUI import *
-from ui import *
+from password_Generator_GUI import MainWindow
 
 from random import choice
 from string import ascii_lowercase, ascii_uppercase, digits, punctuation
