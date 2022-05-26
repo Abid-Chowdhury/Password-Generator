@@ -1,19 +1,21 @@
-from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
-    QRect, QSize, QUrl, Qt)
-from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
-    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
-    QRadialGradient)
+from PySide2.QtCore import (QCoreApplication, QMetaObject, QRect, Qt)
+from PySide2.QtGui import (QFont)
 from PySide2.QtWidgets import *
 
 GLOBAL_STATE = 0
 
 class Ui_MainWindow(object):
+    
     def setupUi(self, MainWindow):
+        
         if MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
+    
         MainWindow.resize(500, 380)
+    
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
+    
         self.frame = QFrame(self.centralwidget)
         self.frame.setObjectName(u"frame")
         self.frame.setGeometry(QRect(0, 0, 500, 380))
@@ -23,6 +25,7 @@ class Ui_MainWindow(object):
 "}")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
+    
         self.label_Title = QLabel(self.frame)
         self.label_Title.setObjectName(u"label_Title")
         self.label_Title.setGeometry(QRect(0, 0, 500, 75))
@@ -39,6 +42,7 @@ class Ui_MainWindow(object):
         self.label_Title.setFrameShadow(QFrame.Plain)
         self.label_Title.setLineWidth(5)
         self.label_Title.setAlignment(Qt.AlignCenter)
+    
         self.horizontalSlider_Length = QSlider(self.frame)
         self.horizontalSlider_Length.setObjectName(u"horizontalSlider_Length")
         self.horizontalSlider_Length.setGeometry(QRect(50, 200, 150, 30))
@@ -91,6 +95,7 @@ class Ui_MainWindow(object):
         self.checkBox_Uppercase.setChecked(True)
         self.checkBox_Uppercase.setAutoExclusive(False)
         self.checkBox_Uppercase.setTristate(False)
+    
         self.checkBox_Lowercase = QCheckBox(self.frame)
         self.checkBox_Lowercase.setObjectName(u"checkBox_Lowercase")
         self.checkBox_Lowercase.setGeometry(QRect(300, 170, 150, 30))
@@ -111,6 +116,10 @@ class Ui_MainWindow(object):
 "    background: 3px solid rgb(189, 147, 249);\n"
 "	border: 3px solid rgb(52, 59, 72);	\n"
 "}")
+        self.checkBox_Lowercase.setChecked(True)
+        self.checkBox_Lowercase.setAutoExclusive(False)
+        self.checkBox_Lowercase.setTristate(False)
+        
         self.label_Length = QLabel(self.frame)
         self.label_Length.setObjectName(u"label_Length")
         self.label_Length.setGeometry(QRect(50, 135, 150, 30))
@@ -122,9 +131,7 @@ class Ui_MainWindow(object):
 "	color: white;\n"
 "}")
         self.label_Length.setAlignment(Qt.AlignCenter)
-        self.checkBox_Lowercase.setChecked(True)
-        self.checkBox_Lowercase.setAutoExclusive(False)
-        self.checkBox_Lowercase.setTristate(False)
+    
         self.checkBox_Numbers = QCheckBox(self.frame)
         self.checkBox_Numbers.setObjectName(u"checkBox_Numbers")
         self.checkBox_Numbers.setGeometry(QRect(300, 205, 150, 30))
@@ -148,6 +155,7 @@ class Ui_MainWindow(object):
         self.checkBox_Numbers.setChecked(True)
         self.checkBox_Numbers.setAutoExclusive(False)
         self.checkBox_Numbers.setTristate(False)
+        
         self.checkBox_Symbols = QCheckBox(self.frame)
         self.checkBox_Symbols.setObjectName(u"checkBox_Symbols")
         self.checkBox_Symbols.setGeometry(QRect(300, 240, 150, 30))
@@ -171,6 +179,7 @@ class Ui_MainWindow(object):
         self.checkBox_Symbols.setChecked(True)
         self.checkBox_Symbols.setAutoExclusive(False)
         self.checkBox_Symbols.setTristate(False)
+        
         self.pushButton_Generate = QPushButton(self.frame)
         self.pushButton_Generate.setObjectName(u"pushButton_Generate")
         self.pushButton_Generate.setGeometry(QRect(185, 300, 130, 50))
@@ -194,6 +203,7 @@ class Ui_MainWindow(object):
 "	background-color: rgb(35, 40, 49);\n"
 "	border: 2px solid rgb(43, 50, 61);\n"
 "}")
+        
         self.line = QFrame(self.frame)
         self.line.setObjectName(u"line")
         self.line.setGeometry(QRect(249, 136, 2, 135))
@@ -203,6 +213,7 @@ class Ui_MainWindow(object):
 "}")
         self.line.setFrameShape(QFrame.VLine)
         self.line.setFrameShadow(QFrame.Sunken)
+        
         self.lineEdit_Password = QLineEdit(self.frame)
         self.lineEdit_Password.setObjectName(u"lineEdit_Password")
         self.lineEdit_Password.setGeometry(QRect(100, 75, 300, 30))
@@ -228,6 +239,7 @@ class Ui_MainWindow(object):
         self.lineEdit_Password.setAlignment(Qt.AlignCenter)
         self.lineEdit_Password.setDragEnabled(False)
         self.lineEdit_Password.setCursorMoveStyle(Qt.VisualMoveStyle)
+        
         self.pushButton_Close = QPushButton(self.frame)
         self.pushButton_Close.setObjectName(u"pushButton_Close")
         self.pushButton_Close.setGeometry(QRect(470, 15, 14, 14))
@@ -235,6 +247,7 @@ class Ui_MainWindow(object):
 "	border-radius: 7px;\n"
 "	background-color: rgb(255,0,0);\n"
 "}")
+        
         self.pushButton_Maximize = QPushButton(self.frame)
         self.pushButton_Maximize.setObjectName(u"pushButton_Maximize")
         self.pushButton_Maximize.setGeometry(QRect(445, 15, 14, 14))
@@ -242,6 +255,7 @@ class Ui_MainWindow(object):
 "	border-radius: 7px;\n"
 "	background-color: rgb(0,255,0);\n"
 "}")
+        
         self.pushButton_Minimize = QPushButton(self.frame)
         self.pushButton_Minimize.setObjectName(u"pushButton_Minimize")
         self.pushButton_Minimize.setGeometry(QRect(420, 15, 14, 14))
@@ -249,6 +263,7 @@ class Ui_MainWindow(object):
 "	border-radius: 7px;\n"
 "	background-color: rgb(255,255,0);\n"
 "}")
+        
         self.lineEdit_Length_Number = QLineEdit(self.frame)
         self.lineEdit_Length_Number.setObjectName(u"lineEdit_Length_Number")
         self.lineEdit_Length_Number.setGeometry(QRect(75, 170, 100, 30))

@@ -1,9 +1,3 @@
-import sys
-from PySide2 import QtCore, QtGui, QtWidgets
-from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
-from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
-from PySide2.QtWidgets import *
-
 from password_Generator_GUI import *
 from ui import *
 
@@ -16,13 +10,16 @@ class UIFunctions(MainWindow):
     # set default length to 8
     password_Length = 8
     
+    # update the length of password when slider is moved
     def update_Length(self):
         UIFunctions.password_Length = self.UIMainwindow.horizontalSlider_Length.value()
         self.UIMainwindow.lineEdit_Length_Number.setText(str(UIFunctions.password_Length))
         
+    # show password in the lineEdit
     def display_Password(self, password):
         self.UIMainwindow.lineEdit_Password.setText(password)
         
+    # generate the password
     def generate_Password(self, include_Numbers, include_Symbols, include_Uppercase, include_Lowercase):
         password = ''
         
@@ -33,7 +30,7 @@ class UIFunctions(MainWindow):
             random_Uppercase = choice(ascii_uppercase)
             random_Lowercase = choice(ascii_lowercase)  
             
-                    # check which characters to include
+            # check which characters to include
             include = []
             if include_Numbers:
                 include.append(random_Number)
@@ -54,5 +51,7 @@ class UIFunctions(MainWindow):
         
         UIFunctions.display_Password(self, password)
         
+        # copy password to clipboard
         copy(password)
+        
         return password
