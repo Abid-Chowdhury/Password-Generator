@@ -208,6 +208,7 @@ class Ui_MainWindow(object):
         self.lineEdit_Password.setGeometry(QRect(100, 75, 300, 30))
         font4 = QFont()
         font4.setPointSize(12)
+        font4.setFamily(u"Arial")
         self.lineEdit_Password.setFont(font4)
         self.lineEdit_Password.setStyleSheet(u"QLineEdit {\n"
 "	color: white;\n"

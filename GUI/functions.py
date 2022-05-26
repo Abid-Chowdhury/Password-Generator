@@ -20,6 +20,9 @@ class UIFunctions(MainWindow):
         UIFunctions.password_Length = self.UIMainwindow.horizontalSlider_Length.value()
         self.UIMainwindow.lineEdit_Length_Number.setText(str(UIFunctions.password_Length))
         
+    def display_Password(self, password):
+        self.UIMainwindow.lineEdit_Password.setText(password)
+        
     def generate_Password(self, include_Numbers, include_Symbols, include_Uppercase, include_Lowercase):
         password = ''
         
@@ -48,6 +51,8 @@ class UIFunctions(MainWindow):
         
             # add random character to password
             password += choice(include)
+        
+        UIFunctions.display_Password(self, password)
         
         copy(password)
         return password
