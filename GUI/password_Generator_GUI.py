@@ -22,7 +22,7 @@ class MainWindow(QMainWindow):
         self.UIMainwindow.pushButton_Minimize.clicked.connect(lambda: self.showMinimized())
         self.UIMainwindow.pushButton_Generate.clicked.connect(lambda: UIFunctions.generate_Password(self, self.UIMainwindow.checkBox_Numbers.isChecked(), self.UIMainwindow.checkBox_Symbols.isChecked(), self.UIMainwindow.checkBox_Uppercase.isChecked(), self.UIMainwindow.checkBox_Lowercase.isChecked()))
         self.UIMainwindow.horizontalSlider_Length.valueChanged.connect(lambda: UIFunctions.update_Length(self))
-        
+
         # move window
         def move_Window(event):
             if Ui_MainWindow.return_Status() == 1:

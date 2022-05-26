@@ -61,6 +61,7 @@ class Ui_MainWindow(object):
         self.horizontalSlider_Length.setMinimum(1)
         self.horizontalSlider_Length.setMaximum(64)
         self.horizontalSlider_Length.setSingleStep(1)
+        self.horizontalSlider_Length.setValue(8)
         
         self.checkBox_Uppercase = QCheckBox(self.frame)
         self.checkBox_Uppercase.setObjectName(u"checkBox_Uppercase")
@@ -267,6 +268,8 @@ class Ui_MainWindow(object):
 "}")
         self.lineEdit_Length_Number.setAlignment(Qt.AlignCenter)
         self.lineEdit_Length_Number.setMaxLength(5)
+        self.lineEdit_Length_Number.setText('8')
+        self.lineEdit_Length_Number.setReadOnly(True)
         
         MainWindow.setCentralWidget(self.centralwidget)
 

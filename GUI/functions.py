@@ -14,6 +14,8 @@ class UIFunctions(MainWindow):
     
     def update_Length(self):
         UIFunctions.password_Length = self.UIMainwindow.horizontalSlider_Length.value()
+        self.UIMainwindow.lineEdit_Length_Number.setText(str(UIFunctions.password_Length))
+
         print(UIFunctions.password_Length)
         
     def generate_Password(self, include_Numbers, include_Symbols, include_Uppercase, include_Lowercase):
