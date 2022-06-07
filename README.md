@@ -2,11 +2,11 @@
 
 ## Modules used
 
-`sys` > `argv` `exit`
-`random` > `choice`
-`string` > `ascii_lowercase` `ascii_uppercase` `digits` `punctuation`
-`pyperclip` > `copy`
-`PySide2` > `QtWidgets` `QtGui` `QtCore`
+`sys` > `argv` `exit` <br/>
+`random` > `choice` <br/>
+`string` > `ascii_lowercase` `ascii_uppercase` `digits` `punctuation` <br/>
+`pyperclip` > `copy` <br/>
+`PySide2` > `QtWidgets` `QtGui` `QtCore` <br/>
 
 ## Credits
 
